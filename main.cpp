@@ -12,14 +12,14 @@ extern "C" {
 int main()
 {
     HsStart();
-	char name[] = {"Test"};
-	printf("Creating module...");
+    char name[] = {"Test"};
+    printf("Creating module...");
     ctx = createContext((void*)name);
 
     char process10[] = {"process 10"};
-	printf("Executing...");
+    printf("Executing...");
     printf("Result is %s\n", (char*)runExpr(ctx, (void*)process10));
-	printf("Done!");
+    printf("Done!");
 
     freeContext(ctx);
     HsEnd();
